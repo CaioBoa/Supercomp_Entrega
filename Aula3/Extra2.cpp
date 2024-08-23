@@ -45,7 +45,6 @@ private:
 // Garanta que A e B são constantes para evitar modificações
 void multiplicaMatriz(const Matriz& A, const Matriz& B, Matriz& C) {
     int N = A.tamanho();  // Supõe que as matrizes são quadradas e de mesma dimensão
-
     // Laço para realizar a multiplicação de matrizes
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -68,13 +67,13 @@ int main() {
 
     // Exemplo de preenchimento das matrizes A e B
     // Sinta-se a vontade para modificar os valores
-    A.set(91, 16, 18); A.set(79, 1, 33); A.set(1, 2, 3);
-    A.set(31, 42, 43); A.set(61, 12, 53); A.set(4, 5, 6);
-    A.set(2, 52, 79); A.set(25, 18, 85); A.set(7, 8, 9);
+    A.set(1, 1, 18); A.set(1, 2, 33); A.set(1, 0, 3);
+    A.set(2, 1, 43); A.set(2, 2, 53); A.set(2, 0, 6);
+    A.set(0, 1, 79); A.set(0, 2, 85); A.set(0, 0, 9);
 
-    B.set(13, 23, 9); B.set(14, 62, 8); B.set(13, 2, 47);
-    B.set(1, 42, 6); B.set(22, 75, 5); B.set(17, 2, 54);
-    B.set(2, 59, 3); B.set(2, 44, 2); B.set(98, 2, 74);
+    B.set(1, 1, 9); B.set(1, 2, 8); B.set(1, 0, 47);
+    B.set(2, 1, 6); B.set(2, 2, 5); B.set(2, 0, 54);
+    B.set(0, 1, 3); B.set(0, 2, 2); B.set(0, 0, 74);
 
     // Multiplica as matrizes A e B, armazenando o resultado em C
     multiplicaMatriz(A, B, C);
